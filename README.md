@@ -1,8 +1,8 @@
-# ChimeBot-Whats-New-At-AWS
+# TeamsBot-Whats-New-At-AWS
 
-A ChatBot for Amazon Chime that sends a message to a group for each news from AWS.
+A ChatBot for Microsoft Teams that sends a message to a group for each news from AWS.
 
-Made with ❤️ by François-Xavier Gsell. Available on the [AWS Serverless Application Repository](https://aws.amazon.com/serverless)
+Modified version of François-Xavier Gsell's [ChimeBot] (https://github.com/fxgsell/ChimeBot-Whats-New-At-AWS).
 
 ## MANUAL INSTALLATION
 
@@ -17,7 +17,7 @@ Made with ❤️ by François-Xavier Gsell. Available on the [AWS Serverless App
 1. Set a value for `ARTIFACT_BUCKET`, `AWS_REGION` and `CHAT_URL` in  `properties.mk`
     - `AWS_REGION`: The AWS region where the bot will be deployed
     - `ARTIFACT_BUCKET`: The S3 bucket to store the package for Lambda, must be in the same `AWS_REGION`
-    - `CHAT_URL`: The webhook URL for your Amazon Chime group.
+    - `CHAT_URL`: The webhook URL for your Microsoft Teams group.
     - `FIREHOSE_STREAM`: Then name of a Stream in the same region to archive the news.
 1. Run `make`
 
