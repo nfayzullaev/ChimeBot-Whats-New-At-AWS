@@ -1,5 +1,5 @@
 PIP=pip3
-PACKAGE=chimebot-whatsnew.zip
+PACKAGE=teamsbot-whatsnew.zip
 ZIP=zip
 
 all: deps

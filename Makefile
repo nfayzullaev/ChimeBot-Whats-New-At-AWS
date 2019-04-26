@@ -1,7 +1,7 @@
 
-TEMPLATE=chimebot-whatsnew.yml
-FINAL_TEMPLATE=chimebot-whatsnew-release.yml
-CF_STACK=ChimeBot-Whats-New-At-AWS
+TEMPLATE=teamsbot-whatsnew.yml
+FINAL_TEMPLATE=teamsbot-whatsnew-release.yml
+CF_STACK=TeamsBot-Whats-New-At-AWS
 
 include properties.mk
 
