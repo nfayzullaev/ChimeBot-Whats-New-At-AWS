@@ -2,7 +2,7 @@
 
 A ChatBot for Microsoft Teams that sends a message to a group for each news from AWS.
 
-Modified version of François-Xavier Gsell's [ChimeBot] (https://github.com/fxgsell/ChimeBot-Whats-New-At-AWS).
+Modified version of François-Xavier Gsell's ChimeBot: https://github.com/fxgsell/ChimeBot-Whats-New-At-AWS.
 
 ## MANUAL INSTALLATION
 
