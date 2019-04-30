@@ -88,10 +88,25 @@ def load_new_items():
 
 
 def post_message(content, tries=0):
+    parse = content.split()
+    text = " ".join(parse[:-2])
+    url = parse[-1]
+    
     msg = {
       "@context": "https://schema.org/extensions",
       "@type": "MessageCard",
-      "text": content
+      "text": text,
+      "potentialAction": [{
+          "@type": "ActionCard",
+          "name": "Read More",
+          "actions": [{
+            "@type": "OpenUri",
+            "name": url,
+                "targets": [
+                    { "os": "default", "uri": url }
+                ]
+          }]
+      }]
     }
     
     if tries > 5:
@@ -120,10 +135,9 @@ def lambda_handler(event, context):
 
     for __, message in new_messages.items():
         content = message['message']
-        # print(content)
-		if post_message(content) != True:
-				print("DEBUG: Failed to send: ", message['id'])
-				status = True
+        if post_message(content) != True:
+            print("DEBUG: Failed to send: ", message['id'])
+            status = True
     
     if status:
         raise Exception("At least one news wasn't sent!")
